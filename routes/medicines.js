@@ -4,12 +4,12 @@ const router = express.Router();
 const {
   getAllMedicines,
   getMedicine,
-  createMedicine,
+  addMedicine,
   updateMedicine,
   deleteMedicine,
 } = require("../controllers/medicines");
 
-router.route('/').post(createMedicine).get(getAllMedicines)
+router.route('/').post(addMedicine).get(getAllMedicines)
 router.route('/:id').get(getMedicine).delete(deleteMedicine).patch(updateMedicine)
 
 

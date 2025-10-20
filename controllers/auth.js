@@ -32,7 +32,21 @@ const login = async (req, res) => {
     res.status(StatusCodes.OK).json({user:{name:user.name}, token})
 }
 
+// Logout
+const logout = async (req, res) => {
+  try {
+    // No session or cookie handling needed for JWT-based auth
+    res.status(StatusCodes.OK).json({ message: 'Logout successful' });
+  } catch (error) {
+    console.error('Error during logout:', error);
+    res
+      .status(StatusCodes.INTERNAL_SERVER_ERROR)
+      .json({ message: 'Logout failed' });
+  }
+};
+
 module.exports = {
     register,
-    login
+    login,
+    logout
 }

@@ -28,7 +28,7 @@ const getMedicine = async (req, res) =>{
 }
 
 //create a medicine record
-const createMedicine = async (req, res) =>{
+const addMedicine = async (req, res) =>{
  req.body.createdBy = req.user.userId
   const medicine = await Medicine.create(req.body)
   res.status(StatusCodes.CREATED).json({ medicine })
@@ -80,7 +80,7 @@ const deleteMedicine = async (req, res) =>{
 module.exports = {
     getAllMedicines,
     getMedicine,
-    createMedicine,
+    addMedicine,
     updateMedicine,
     deleteMedicine
 }
