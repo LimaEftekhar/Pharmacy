@@ -32,6 +32,16 @@ app.use(
 
 app.use(express.json());
 
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://pharmacy-plly.onrender.com/"
+    ],
+    credentials: true,
+  })
+);
+
 // extra packages
 app.use(helmet());
 app.use(cors());
