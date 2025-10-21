@@ -44,7 +44,7 @@ app.use(
 
 // extra packages
 app.use(helmet());
-app.use(cors());
+// app.use(cors());
 app.use(xss());
 
 // routes
