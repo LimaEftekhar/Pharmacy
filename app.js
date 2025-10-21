@@ -35,7 +35,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://pharmacy-plly.onrender.com",
+      "https://subhan-pharmacy.onrender.com",
       "http://localhost:5173"
     ],
     credentials: true,
